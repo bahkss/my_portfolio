@@ -23,7 +23,7 @@ function App() {
           boxSizing: "border-box",
         }}
       >
-        🚀 Currently open to internship opportunities in Software
+        🚀 Currently open to work opportunities in Software
         Engineering & Mobile Development
       </div>
 
