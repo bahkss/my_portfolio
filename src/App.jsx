@@ -1,4 +1,4 @@
-
+import profile from "./assets/profile.png";
 function App() {
   return (
     <div
@@ -165,19 +165,27 @@ function App() {
               View Projects
             </button>
 
-            <button
+            <a
+              href="/resume_bahriah.pdf"
+              download
               style={{
-                backgroundColor: "transparent",
-                color: "white",
-                border: "1px solid #2d2d3f",
-                padding: "15px 28px",
-                borderRadius: "12px",
-                cursor: "pointer",
-                fontSize: "15px",
+                textDecoration: "none",
               }}
             >
-              Download Resume
-            </button>
+              <button
+                style={{
+                  backgroundColor: "transparent",
+                  color: "white",
+                  border: "1px solid #2d2d3f",
+                  padding: "15px 28px",
+                  borderRadius: "12px",
+                  cursor: "pointer",
+                  fontSize: "15px",
+                }}
+              >
+                Download Resume
+              </button>
+            </a>
           </div>
 
           {/* SOCIALS */}
@@ -228,7 +236,7 @@ function App() {
             }}
           >
             <img
-              src="https://via.placeholder.com/420x500"
+              src={profile}
               alt="profile"
               style={{
                 width: "100%",
