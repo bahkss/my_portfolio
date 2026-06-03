@@ -61,24 +61,57 @@ function App() {
             color: "#d4d4d8",
           }}
         >
-          <p>About</p>
-          <p>Experience</p>
-          <p>Projects</p>
-          <p>Skills</p>
+            {/* ✅ CHANGE 2: EXPERIENCE SCROLL */}
+            <p
+              style={{ cursor: "pointer" }}
+              onClick={() =>
+                document
+                  .getElementById("experience")
+                  .scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              Experience
+            </p>
 
-          <button
-            style={{
-              backgroundColor: "#7c3aed",
-              color: "white",
-              border: "none",
-              padding: "10px 22px",
-              borderRadius: "10px",
-              cursor: "pointer",
-              fontSize: "14px",
-            }}
-          >
-            Contact
-          </button>
+            {/* ✅ CHANGE 3: PROJECTS SCROLL */}
+            <p
+              style={{ cursor: "pointer" }}
+              onClick={() =>
+                document
+                  .getElementById("projects")
+                  .scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              Projects
+            </p>
+
+            {/* ✅ CHANGE 4: SKILLS SCROLL */}
+            <p
+              style={{ cursor: "pointer" }}
+              onClick={() =>
+                document
+                  .getElementById("skills")
+                  .scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              Skills
+            </p>
+
+            <a href="#contact" style={{ textDecoration: "none" }}>
+                <button
+                  style={{
+                    backgroundColor: "#7c3aed",
+                    color: "white",
+                    border: "none",
+                    padding: "10px 22px",
+                    borderRadius: "10px",
+                    cursor: "pointer",
+                    fontSize: "14px",
+                  }}
+                >
+                  Contact
+                </button>
+            </a>
         </div>
       </div>
 
@@ -197,21 +230,72 @@ function App() {
               flexWrap: "wrap",
             }}
           >
-            {["GitHub", "LinkedIn", "Email"].map((item) => (
+            {/* GITHUB */}
+            <a
+              href="https://github.com/bahkss"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
+            >
               <div
-                key={item}
                 style={{
                   backgroundColor: "#11111a",
                   border: "1px solid #1f1f30",
                   padding: "12px 18px",
                   borderRadius: "10px",
                   fontSize: "14px",
+                  color: "white",
+                  cursor: "pointer",
                 }}
               >
-                {item}
+                GitHub
               </div>
-            ))}
+            </a>
+
+            {/* LINKEDIN */}
+            <a
+              href="https://www.linkedin.com/in/bahriah-kamardi-617730255/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
+            >
+              <div
+                style={{
+                  backgroundColor: "#11111a",
+                  border: "1px solid #1f1f30",
+                  padding: "12px 18px",
+                  borderRadius: "10px",
+                  fontSize: "14px",
+                  color: "white",
+                  cursor: "pointer",
+                }}
+              >
+                LinkedIn
+              </div>
+            </a>
+
+            {/* EMAIL */}
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=bahriahkamardi@gmail.com"
+              style={{ textDecoration: "none" }}
+            >
+              <div
+                style={{
+                  backgroundColor: "#11111a",
+                  border: "1px solid #1f1f30",
+                  padding: "12px 18px",
+                  borderRadius: "10px",
+                  fontSize: "14px",
+                  color: "white",
+                  cursor: "pointer",
+                }}
+              >
+                Email
+              </div>
+            </a>
           </div>
+
+
         </div>
 
         {/* RIGHT SIDE IMAGE */}
@@ -293,6 +377,7 @@ function App() {
 
         {/* SKILLS CARD */}
         <div
+          id="skills"
           style={{
             flex: 1,
             minWidth: "300px",
@@ -313,6 +398,7 @@ function App() {
           </h2>
 
           <div
+            id="skills"
             style={{
               display: "flex",
               flexWrap: "wrap",
@@ -327,7 +413,7 @@ function App() {
               "Python",
               "Firebase",
               "MySQL",
-              "Git",
+              "GitHub",
             ].map((skill) => (
               <div
                 key={skill}
@@ -345,6 +431,114 @@ function App() {
             ))}
           </div>
         </div>
+
+        {/* EXPERIENCE */}
+        <div
+          id="experience"
+          style={{
+            flex: 1,
+            minWidth: "300px",
+            backgroundColor: "#0d0d18",
+            border: "1px solid #1f1f30",
+            borderRadius: "20px",
+            padding: "35px",
+            boxSizing: "border-box",
+          }}
+        >
+          <h2
+            style={{
+              color: "#a855f7",
+              marginBottom: "20px",
+            }}
+          >
+            Experience
+          </h2>
+
+          <p
+            style={{
+              color: "#b4b4c7",
+              lineHeight: "1.9",
+              fontSize: "15px",
+            }}
+          >
+            Internship Software Developer – Cat Tech Enterprise<br /><br />
+            March 2025 – September 2025 <br />
+            Gained practical knowledge by developing Frontend for mobile application using React Native Expo. <br />
+            Assists with IOT hardware troubleshooting consists of Raspberry Pi, ESP8266 and others. <br />
+            Assists in debugging web application using Laravel Framework. 
+          </p>
+        </div>
+
+        <div
+          id="projects"
+          style={{
+            flex: 1,
+            minWidth: "300px",
+            backgroundColor: "#0d0d18",
+            border: "1px solid #1f1f30",
+            borderRadius: "20px",
+            padding: "35px",
+            boxSizing: "border-box",
+          }}
+        >
+          <h2
+            style={{
+              color: "#a855f7",
+              marginBottom: "20px",
+            }}
+          >
+            Projects
+          </h2>
+
+          <p
+            style={{
+              color: "#b4b4c7",
+              lineHeight: "1.9",
+              fontSize: "15px",
+            }}
+          >
+            Medical AI Chatbot Mobile Application Developer – Final Year’s Project<br /><br />
+            Develop Frontend for mobile application using React Native Expo.<br /> 
+            Develop Backend using FastAPI, Python, and RESTFUL API for language and symptom paramater.<br /> 
+            Gained knowledge by deploying backend server using Gcloud and Render .<br />
+            Preprocessing Dataset JSON format for dataset for symptom matching-retrieval .<br />
+            Integration of Gemini AI API for reasoning and firebase for database storage 
+          </p>
+        </div>
+
+        {/* CONTACT */}
+        <div
+          id="contact"
+          style={{
+            flex: 1,
+            minWidth: "300px",
+            backgroundColor: "#0d0d18",
+            border: "1px solid #1f1f30",
+            borderRadius: "20px",
+            padding: "35px",
+            boxSizing: "border-box",
+          }}
+        >
+          <h2
+            style={{
+              color: "#a855f7",
+              marginBottom: "20px",
+            }}
+          >
+            Contact
+          </h2>
+
+          <p
+            style={{
+              color: "#b4b4c7",
+              lineHeight: "1.9",
+              fontSize: "15px",
+            }}
+          >
+            Email: bahriahkamardi@gmail.com
+          </p>
+        </div>
+
       </div>
     </div>
   );
