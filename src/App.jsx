@@ -199,7 +199,7 @@ function App() {
             </button>
 
             <a
-              href="/resume_bahriah.pdf"
+              href="/resume_bahriah2.pdf"
               download
               style={{
                 textDecoration: "none",
